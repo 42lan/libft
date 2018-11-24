@@ -1,0 +1,2 @@
+# libft
+Le projet libft reprend le concept du D06 de la piscine, à savoir me faire écrire une bibliothèque de fonctions utiles que je pourrai ensuite utiliser dans la vaste majorité de mes projets de C cette année et ainsi me faire gagner beaucoup de temps. Ce projet me demande d’écrire beaucoup de code que j'ai déja réalisé pendant la piscine, ce qui en fait un excellent moment pour faire le point sur mes avancement.
