@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 20:12:12 by amalsago          #+#    #+#             */
-/*   Updated: 2018/11/24 11:06:27 by amalsago         ###   ########.fr       */
+/*   Updated: 2018/11/24 11:24:26 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ size_t		ft_strlen(const char *s1)
 	int		len;
 
 	len = 0;
-	if (s1)
-		while (*s1++)
-			len++;
+	while (*s1++)
+		len++;
 	return (len);
 }
