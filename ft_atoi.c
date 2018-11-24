@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 17:00:10 by amalsago          #+#    #+#             */
-/*   Updated: 2018/11/22 21:15:18 by amalsago         ###   ########.fr       */
+/*   Updated: 2018/11/24 10:28:32 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int		ft_atoi(const char *str)
 	neg = 1;
 	while ((str[i] > 8 && str[i] < 14) || str[i] == 32)
 		i++;
-	if (str[i] == 43 || str[i] == 45)
-		if (str[i++] == 45)
+	if (str[i] == '+' || str[i] == '-')
+		if (str[i++] == '-')
 			neg = -1;
 	while (str[i] != '\0')
 	{
