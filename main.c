@@ -6,7 +6,7 @@
 /*   By: amalsago <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 11:26:57 by amalsago          #+#    #+#             */
-/*   Updated: 2018/11/24 13:37:41 by amalsago         ###   ########.fr       */
+/*   Updated: 2018/11/24 13:43:38 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	test_ft_memset()
 	
 	size = 4;
 	c = '#';
-	ft_strcpy(s1, "Hello Galaxy\n42!");
+	strcpy(s1, "Hello Galaxy\n42!");
 	ft_strcpy(s2, "Hello Galaxy\n42!");
 	
 	memset(s1, c, size);
@@ -43,7 +43,7 @@ void	test_ft_bzero()
 	char	tab[10];
 
 	ft_strcpy(tab, "---------");
-	//ft_bzero(tab, 4);
+	ft_bzero(tab, 4);
 	printf("%s\n", tab);
 }
 
@@ -493,71 +493,71 @@ int		main(int argc, char *argv[])
 {
 	(void)argc;	(void)argv;
 	test_ft_memset();
-	ft_putstr("\n\n");
-	test_ft_bzero();
-	ft_putstr("\n\n");
-	test_ft_memcpy();
-	ft_putstr("\n\n");
-	test_ft_memccpy();
-	ft_putstr("\n\n");
-	test_ft_memmove();
-	ft_putstr("\n\n");
-	test_ft_memcmp();
-	ft_putstr("\n\n");
-	test_ft_strlen();	
-	ft_putstr("\n\n");
-	test_ft_strdup();	
-	ft_putstr("\n\n");
-	test_ft_strcpy();	
-	ft_putstr("\n\n");
-	test_ft_strncpy();	
-	ft_putstr("\n\n");
-	test_ft_strcat();
-	ft_putstr("\n\n");
-	test_ft_strncat();
-	ft_putstr("\n\n");
-	test_ft_strlcat();
-	ft_putstr("\n\n");
-	test_ft_strchr();
-	ft_putstr("\n\n");
-	test_ft_strrchr();
-	ft_putstr("\n\n");
-	test_ft_strstr();
-	ft_putstr("\n\n");
-	test_ft_strnstr();
-	ft_putstr("\n\n");
-	test_ft_strcmp();
-	ft_putstr("\n\n");
-	test_ft_strncmp();
-	ft_putstr("\n\n");
-	test_ft_atoi();	
-	ft_putstr("\n\n");
-	test_ft_isalpha();	
-	ft_putstr("\n\n");
-	test_ft_isdigit();	
-	ft_putstr("\n\n");
-	test_ft_isalnum();	
-	ft_putstr("\n\n");
-	test_ft_isascii();	
-	ft_putstr("\n\n");
-	test_ft_isprint();	
-	ft_putstr("\n\n");
-	test_ft_toupper();
-	ft_putstr("\n\n");
-	test_ft_tolower();
-	ft_putstr("\n\n");
+	ft_putstr("\n");
+	//test_ft_bzero();
+	ft_putstr("\n");
+	//test_ft_memcpy();
+	ft_putstr("\n");
+	//test_ft_memccpy();
+	ft_putstr("\n");
+	//test_ft_memmove();
+	ft_putstr("\n");
+	//test_ft_memcmp();
+	ft_putstr("\n");
+	//test_ft_strlen();	
+	ft_putstr("\n");
+	//test_ft_strdup();	
+	ft_putstr("\n");
+	//test_ft_strcpy();	
+	ft_putstr("\n");
+	//test_ft_strncpy();	
+	ft_putstr("\n");
+	//test_ft_strcat();
+	ft_putstr("\n");
+	//test_ft_strncat();
+	ft_putstr("\n");
+	//test_ft_strlcat();
+	ft_putstr("\n");
+	//test_ft_strchr();
+	ft_putstr("\n");
+	//test_ft_strrchr();
+	ft_putstr("\n");
+	//test_ft_strstr();
+	ft_putstr("\n");
+	//test_ft_strnstr();
+	ft_putstr("\n");
+	//test_ft_strcmp();
+	ft_putstr("\n");
+	//test_ft_strncmp();
+	ft_putstr("\n");
+	//test_ft_atoi();	
+	ft_putstr("\n");
+	//test_ft_isalpha();	
+	ft_putstr("\n");
+	//test_ft_isdigit();	
+	ft_putstr("\n");
+	//test_ft_isalnum();	
+	ft_putstr("\n");
+	//test_ft_isascii();	
+	ft_putstr("\n");
+	//test_ft_isprint();	
+	ft_putstr("\n");
+	//test_ft_toupper();
+	ft_putstr("\n");
+	//test_ft_tolower();
+	ft_putstr("\n");
 	
-	test_ft_strtrim();
-	ft_putstr("\n\n");
-	test_ft_strsplit(argc, argv);
-	ft_putstr("\n\n");
-	test_ft_itoa();
-	ft_putstr("\n\n");
-	test_ft_putnbr();
-	ft_putstr("\n\n");
+	//test_ft_strtrim();
+	ft_putstr("\n");
+	//test_ft_strsplit(argc, argv);
+	ft_putstr("\n");
+	//test_ft_itoa();
+	ft_putstr("\n");
+	//test_ft_putnbr();
+	ft_putstr("\n");
 
-	test_ft_swap();
-	ft_putstr("\n\n");
+	//test_ft_swap();
+	ft_putstr("\n");
 	
 	return (0);
 }
