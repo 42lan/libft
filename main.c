@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>		/********** A SUPPRIMER **********/ 
-#include <stdio.h>		/********** A SUPPRIMER **********/ 
-#include <ctype.h>		/********** A SUPPRIMER **********/ 
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
 #include "libft.h"
 
 
