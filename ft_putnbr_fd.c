@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 17:04:06 by amalsago          #+#    #+#             */
-/*   Updated: 2018/11/19 17:06:14 by amalsago         ###   ########.fr       */
+/*   Updated: 2018/11/24 10:59:34 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
+	if (n == INT_MIN)
 		ft_putstr_fd("-2147483648", fd);
 	else if (n < 0)
 	{

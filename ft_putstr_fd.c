@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 08:38:02 by amalsago          #+#    #+#             */
-/*   Updated: 2018/11/19 08:54:20 by amalsago         ###   ########.fr       */
+/*   Updated: 2018/11/24 10:59:56 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_putstr_fd(char const *s, int fd)
 {
 	int		i;
 
-	i = 0;
-	if (s)
+	if (s && fd)
 	{
+		i = 0;
 		while (s[i] != '\0')
 		{
 			ft_putchar_fd(s[i], fd);
