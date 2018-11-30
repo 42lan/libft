@@ -1,7 +1,5 @@
 # libft
 
-The aim of this project is to code a C library regrouping usual functions that I’ll be allowed to use in all my other projects.
-
 The **libft** project builds on the concepts I learned during Day-06 of the bootcamp ie code a library of useful functions that I'll be allowed to reuse in most of your C projects this year. This will save me a lot of precious time. The following assignments will have me write lines of code I already wrote during the bootcamp.
 
 ### Objectives
