@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>		/********** A SUPPRIMER **********/ 
-#include <stdio.h>		/********** A SUPPRIMER **********/ 
-#include <ctype.h>		/********** A SUPPRIMER **********/ 
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h> 
 #include "libft.h"
 
 
@@ -470,6 +470,7 @@ void	test_ft_putstr()
 /*************************************/
 /*************************************/
 
+/*
 void	test_ft_swap()
 {
 	char	*a;
@@ -485,7 +486,7 @@ void	test_ft_swap()
 	ft_swap(pa, pb, sizeof(char *));
 	printf("%s %s\n", a, b);
 }
-
+*/
 
 
 
