@@ -425,7 +425,8 @@ void	test_ft_strsplit(int ac, char **av)
 {
 	int	i;
 	char **tab;
-
+	
+	i = 0;
 	(void)ac;
 	tab = ft_strsplit(av[1], av[2][0]);
 	while(tab[i] != 0)
