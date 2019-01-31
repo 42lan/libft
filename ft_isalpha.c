@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 16:53:09 by amalsago          #+#    #+#             */
-/*   Updated: 2018/11/22 21:15:42 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/01/31 16:53:08 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int		ft_isalpha(int c)
 {
-	if ((c > 64 && c < 91) || (c > 96 && c < 123))
-		return (1);
-	return (0);
+	return (ft_isupper(c) || ft_islower(c));
 }
