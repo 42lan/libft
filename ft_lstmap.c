@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 18:18:56 by amalsago          #+#    #+#             */
-/*   Updated: 2018/11/22 16:09:56 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/01/31 17:38:40 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list	**tmp;
 
 	if (!lst || !f)
-		return (NULL);	
+		return (NULL);
 	newlst = f(lst);
 	tmp = &newlst;
 	while (lst)
