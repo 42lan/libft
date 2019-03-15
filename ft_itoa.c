@@ -19,7 +19,7 @@ char	*ft_itoa(int n)
 	char		*str;
 
 	nbr = n;
-	len = ft_nofdig(nbr);
+	len = ft_nblen(nbr);
 	if (!(str = ft_strnew(nbr < 0 ? ++len : len)))
 		return (NULL);
 	if (nbr == 0)
