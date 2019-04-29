@@ -6,14 +6,11 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 17:39:03 by amalsago          #+#    #+#             */
-/*   Updated: 2019/04/17 18:20:03 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/04/25 18:41:42 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-# define BASE_LOWER "0123456789abcdefghijklmnopqrstuvwxyz"
-# define BASE_UPPER "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 static size_t	ft_uilen(uintmax_t number, unsigned base)
 {
@@ -36,25 +33,15 @@ char			*ft_uitoa_base(uintmax_t number, unsigned base, int uppercase)
 	size_t		length;
 
 	if (base < 2 || base > 36)
-		exit (0);
+		exit(0);
 	length = ft_uilen(number, base);
 	if (!(str = ft_strnew(length)))
 		return (NULL);
-	if (uppercase == 0)
+	while (length != 0)
 	{
-		while (length != 0)
-		{
-			str[--length] = BASE_LOWER[number % base];
-			number /= base;
-		}
-	}
-	else
-	{
-		while (length != 0)
-		{
-			str[--length] = BASE_UPPER[number % base];
-			number /= base;
-		}
+		str[--length] = (uppercase == 0)
+						? BASE_LOWER[number % base] : BASE_UPPER[number % base];
+		number /= base;
 	}
 	return (str);
 }
