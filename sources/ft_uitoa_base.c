@@ -6,13 +6,13 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 17:39:03 by amalsago          #+#    #+#             */
-/*   Updated: 2019/04/25 18:41:42 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/04/29 19:18:18 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_uilen(uintmax_t number, unsigned base)
+static size_t	ft_uilen(uintmax_t number, int base)
 {
 	size_t		length;
 
@@ -27,7 +27,7 @@ static size_t	ft_uilen(uintmax_t number, unsigned base)
 	return (length);
 }
 
-char			*ft_uitoa_base(uintmax_t number, unsigned base, int uppercase)
+char			*ft_uitoa_base(uintmax_t number, int base, int uppercase)
 {
 	char		*str;
 	size_t		length;
@@ -44,4 +44,4 @@ char			*ft_uitoa_base(uintmax_t number, unsigned base, int uppercase)
 		number /= base;
 	}
 	return (str);
-}
+
