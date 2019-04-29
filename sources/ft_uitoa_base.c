@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 17:39:03 by amalsago          #+#    #+#             */
-/*   Updated: 2019/04/29 19:18:18 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/04/29 19:19:40 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,4 @@ char			*ft_uitoa_base(uintmax_t number, int base, int uppercase)
 		number /= base;
 	}
 	return (str);
-
+}
