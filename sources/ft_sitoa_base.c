@@ -6,13 +6,11 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 00:39:03 by amalsago          #+#    #+#             */
-/*   Updated: 2019/04/17 17:26:02 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/04/25 17:11:45 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-# define BASE "0123456789abcdefghijklmnopqrstuvwxyz"
 
 static size_t	ft_silen(intmax_t number, unsigned base)
 {
@@ -31,26 +29,37 @@ static size_t	ft_silen(intmax_t number, unsigned base)
 	return (length);
 }
 
-char			*ft_sitoa_base(intmax_t number, unsigned base)
+static void		check_sign(char **str, intmax_t *number, size_t *length)
+{
+	if (*number < 0)
+	{
+		--(*length);
+		*str[0] = '-';
+		*number *= -1;
+	}
+}
+
+char			*ft_sitoa_base(intmax_t number, unsigned base, int uppercase)
 {
 	char		*str;
 	size_t		length;
 
 	if (base < 2 || base > 36)
-		exit (0);
+		exit(0);
 	length = ft_silen(number, base);
 	if (!(str = ft_strnew(length)))
 		return (NULL);
-	if (number < 0)
-	{
-		--length;
-		str[0] = '-';
-		number *= -1;
-	}
+	check_sign(&str, &number, &length);
 	while (length != 0)
 	{
-		str[length--] = BASE[number % base];
+		if (number < 0)
+			str[length--] = BASE_LOWER[number % base];
+		else
+			str[--length] = BASE_LOWER[number % base];
 		number /= base;
 	}
+	if (uppercase == 1)
+		while (*str)
+			ft_toupper(*str++);
 	return (str);
 }
