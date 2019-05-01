@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 12:05:58 by amalsago          #+#    #+#             */
-/*   Updated: 2019/04/29 18:38:35 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/05/01 13:39:41 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,6 @@ void				ft_swap(void *a, void *b, size_t size);
 char				**ft_strnew2d(size_t size);
 char				*ft_sitoa_base(intmax_t number, int base, int uppercase);
 char				*ft_uitoa_base(uintmax_t number, int base, int uppercase);
+char				*ft_litoa(intmax_t number);
 
 #endif
