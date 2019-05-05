@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 00:39:03 by amalsago          #+#    #+#             */
-/*   Updated: 2019/05/05 12:43:56 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/05/05 17:27:00 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,9 @@ char			*ft_sitoa_base(intmax_t number, int base, int uppercase)
 	if (!(str = ft_strnew(length)))
 		return (NULL);
 	check_sign(&str, &number, base);
-	if (uppercase == 1)
+	if (number == 0)
+		str[0] = '0';
+	else if (uppercase == 1)
 		while (number > 0)
 		{
 			str[--length] = BASE_UPPER[number % base];
