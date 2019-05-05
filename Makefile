@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 11:06:32 by amalsago          #+#    #+#              #
-#    Updated: 2019/05/05 16:21:03 by amalsago         ###   ########.fr        #
+#    Updated: 2019/05/05 16:25:00 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ MKDIR		= /bin/mkdir -p
 # **************************************************************************** #
 # Directories of source and object files
 
-INCDIR		= -I ./include
+INCDIR		= ./include
 SRCDIR		= ./sources
 OBJDIR		= ./objects
 
@@ -125,7 +125,7 @@ $(NAME): $(OBJ)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	-@$(MKDIR) $(OBJDIR)
-	$(CC) $(INCDIR) -o $@ -c $<
+	$(CC) -I $(INCDIR) -o $@ -c $<
 
 clean:
 	$(RM) $(OBJDIR)
