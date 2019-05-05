@@ -6,28 +6,11 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 00:39:03 by amalsago          #+#    #+#             */
-/*   Updated: 2019/05/05 12:31:15 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/05/05 12:43:56 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	ft_silen(intmax_t number, int base)
-{
-	size_t		length;
-
-	length = 0;
-	if (number == 0)
-		return (1);
-	else if (number < 0)
-		length = 1;
-	while (number != 0)
-	{
-		number /= base;
-		++length;
-	}
-	return (length);
-}
 
 static void		check_sign(char **str, intmax_t *number, int base)
 {
