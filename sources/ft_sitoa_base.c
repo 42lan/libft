@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 00:39:03 by amalsago          #+#    #+#             */
-/*   Updated: 2019/04/29 19:18:30 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/05/05 12:31:15 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,12 @@ static size_t	ft_silen(intmax_t number, int base)
 	return (length);
 }
 
-static void		check_sign(char **str, intmax_t *number, size_t *length)
+static void		check_sign(char **str, intmax_t *number, int base)
 {
 	if (*number < 0)
 	{
-		--(*length);
-		*str[0] = '-';
+		if (base == 10)
+			*(str[0]) = '-';
 		*number *= -1;
 	}
 }
@@ -45,21 +45,23 @@ char			*ft_sitoa_base(intmax_t number, int base, int uppercase)
 	size_t		length;
 
 	if (base < 2 || base > 36)
-		exit(0);
-	length = ft_silen(number, base);
+		return (NULL);
+	length = (number < 0 && base != 10) ? ft_silen(number, base) - 1
+										: ft_silen(number, base);
 	if (!(str = ft_strnew(length)))
 		return (NULL);
-	check_sign(&str, &number, &length);
-	while (length != 0)
-	{
-		if (number < 0)
-			str[length--] = BASE_LOWER[number % base];
-		else
-			str[--length] = BASE_LOWER[number % base];
-		number /= base;
-	}
+	check_sign(&str, &number, base);
 	if (uppercase == 1)
-		while (*str)
-			ft_toupper(*str++);
+		while (number > 0)
+		{
+			str[--length] = BASE_UPPER[number % base];
+			number /= base;
+		}
+	else
+		while (number > 0)
+		{
+			str[--length] = BASE_LOWER[number % base];
+			number /= base;
+		}
 	return (str);
 }
