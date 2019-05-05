@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/05 12:43:10 by amalsago          #+#    #+#             */
-/*   Updated: 2019/05/05 12:43:34 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/05/05 16:23:53 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,3 @@ size_t		ft_silen(intmax_t number, int base)
 	}
 	return (length);
 }
-
