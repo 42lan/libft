@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 11:06:32 by amalsago          #+#    #+#              #
-#    Updated: 2019/05/06 10:13:09 by amalsago         ###   ########.fr        #
+#    Updated: 2019/05/06 12:03:51 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ NAME		= libft.a
 # System commands
 
 AR			= /usr/bin/ar -rc
-CC			= /usr/bin/clang
+CC			= /usr/bin/clang -Wall -Wextra -Werror
 RM			= /bin/rm -rf
 RANLIB		= /usr/bin/ranlib
 NORMINETTE	= /usr/bin/norminette
@@ -109,6 +109,7 @@ SRCNAME		= ft_memset.c				\
 			  ft_litoa.c				\
 			  ft_itoa_static.c			\
 			  ft_litoa_static.c			\
+			  ft_sitoa_base_static.c	\
 			  ft_uitoa_base_static.c
 
 
