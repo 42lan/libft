@@ -6,26 +6,26 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/17 00:39:03 by amalsago          #+#    #+#             */
-/*   Updated: 2019/05/05 17:27:00 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/05/06 15:52:17 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		check_sign(char **str, intmax_t *number, int base)
+static void			check_sign(intmax_t *number, int base, char *str)
 {
 	if (*number < 0)
 	{
 		if (base == 10)
-			*(str[0]) = '-';
+			str[0] = '-';
 		*number *= -1;
 	}
 }
 
-char			*ft_sitoa_base(intmax_t number, int base, int uppercase)
+char				*ft_sitoa_base(intmax_t number, int base, int uppercase)
 {
-	char		*str;
-	size_t		length;
+	static char		*str;
+	size_t			length;
 
 	if (base < 2 || base > 36)
 		return (NULL);
@@ -33,7 +33,7 @@ char			*ft_sitoa_base(intmax_t number, int base, int uppercase)
 										: ft_silen(number, base);
 	if (!(str = ft_strnew(length)))
 		return (NULL);
-	check_sign(&str, &number, base);
+	check_sign(&number, base, str);
 	if (number == 0)
 		str[0] = '0';
 	else if (uppercase == 1)
