@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 08:59:03 by amalsago          #+#    #+#             */
-/*   Updated: 2019/05/06 11:22:37 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/05/06 15:49:58 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char			*ft_itoa(int n)
 {
-	intmax_t	nbr;
-	size_t		len;
 	char		*str;
+	size_t		length;
+	intmax_t	nbr;
 
 	nbr = n;
-	len = ft_nblen(nbr);
-	if (!(str = ft_strnew(len)))
+	length = ft_nblen(nbr);
+	if (!(str = ft_strnew(length)))
 		return (NULL);
 	if (nbr == 0)
 		str[0] = '0';
@@ -29,9 +29,9 @@ char			*ft_itoa(int n)
 		str[0] = '-';
 		nbr *= -1;
 	}
-	while (nbr != 0)
+	while (nbr > 0)
 	{
-		str[--len] = (nbr % 10) + '0';
+		str[--length] = (nbr % 10) + '0';
 		nbr /= 10;
 	}
 	return (str);
