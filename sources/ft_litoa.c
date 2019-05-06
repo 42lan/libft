@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/05 19:00:58 by amalsago          #+#    #+#             */
-/*   Updated: 2019/05/05 19:02:02 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/05/06 08:55:30 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char			*ft_litoa(intmax_t number)
 		return (NULL);
 	if (number == 0)
 		str[len - 1] = number + '0';
-	if (number < 0)
+	else if (number < 0)
 	{
 		str[0] = '-';
 		number *= -1;
