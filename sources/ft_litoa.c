@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/05 19:00:58 by amalsago          #+#    #+#             */
-/*   Updated: 2019/05/06 08:55:30 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/05/06 08:59:08 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char			*ft_litoa(intmax_t number)
 	size_t		len;
 	char		*str;
 
-	len = ft_silen(number);
+	len = ft_silen(number, 10);
 	if (number <= LLONG_MIN)
 	{
 		str = ft_strdup("-9223372036854775808");
