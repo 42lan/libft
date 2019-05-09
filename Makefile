@@ -130,7 +130,7 @@ $(NAME): $(OBJ)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	-@$(MKDIR) $(OBJDIR)
-	$(CC) -I $(INCDIR) -o $@ -c $<
+	$(CC) -I $(INCDIR) -c $< -o $@
 
 clean:
 	$(RM) $(OBJDIR)
