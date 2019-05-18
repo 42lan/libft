@@ -96,7 +96,6 @@ int					ft_isseparator(char c, char separator);
 int					ft_cntwords(char const *s, char c);
 size_t				ft_nblen(intmax_t n);
 void				ft_swap(void *a, void *b, size_t size);
-char				**ft_strnew2d(size_t size);
 char				*ft_sitoa_base(intmax_t number, int base, int uppercase);
 size_t				ft_silen(intmax_t number, int base);
 char				*ft_uitoa_base(uintmax_t number, int base, int uppercase);
