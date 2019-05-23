@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 11:06:32 by amalsago          #+#    #+#              #
-#    Updated: 2019/05/06 12:03:51 by amalsago         ###   ########.fr        #
+#    Updated: 2019/05/22 13:30:18 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,10 +16,17 @@
 NAME		= libft.a
 
 # **************************************************************************** #
+# GNU Compiler Collection
+
+GCC			= /usr/bin/clang
+WOPT		= -Wall -Wextra -Werror
+OOPT		= -O2
+IOPT		= -I $(INCDIR)
+
+# **************************************************************************** #
 # System commands
 
 AR			= /usr/bin/ar -rc
-CC			= /usr/bin/clang -Wall -Wextra -Werror
 RM			= /bin/rm -rf
 RANLIB		= /usr/bin/ranlib
 NORMINETTE	= /usr/bin/norminette
@@ -110,7 +117,8 @@ SRCNAME		= ft_memset.c				\
 			  ft_itoa_static.c			\
 			  ft_litoa_static.c			\
 			  ft_sitoa_base_static.c	\
-			  ft_uitoa_base_static.c
+			  ft_uitoa_base_static.c	\
+			  ft_ftoa_static.c
 
 
 # **************************************************************************** #
@@ -120,6 +128,15 @@ SRC			= $(addprefix $(SRCDIR)/, $(SRCNAME))
 OBJ			= $(addprefix $(OBJDIR)/, $(SRCNAME:.c=.o))
 
 # **************************************************************************** #
+# Extra
+
+CLEAR       = "\033[K"
+EOC			= "\033[0;0m"
+GREEN		= "\033[0;32m"
+CR			= "\r"$(CLEAR)
+BASENAME	= `basename $(PWD)`
+
+# **************************************************************************** #
 # Rules
 
 all: $(NAME)
@@ -127,10 +144,12 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 	$(RANLIB) $(NAME)
+	printf $(CR)$(GREEN)"✓ $(NAME) is created\n"$(EOC)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	-@$(MKDIR) $(OBJDIR)
-	$(CC) -I $(INCDIR) -c $< -o $@
+	$(GCC) $(WOPT) $(OOPT) $(IOPT) -c $< -o $@
+	printf $(CR)"[ $(BASENAME)/%s ]"$(CLEAR) $@
 
 clean:
 	$(RM) $(OBJDIR)
