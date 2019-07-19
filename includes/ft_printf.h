@@ -6,26 +6,27 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/05 23:37:46 by amalsago          #+#    #+#             */
-/*   Updated: 2019/05/23 16:50:22 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/07/19 16:05:43 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
+# ifndef BUFF_SIZE
+#  define BUFF_SIZE	4096
 
-# include "libft.h"
-# include <stdarg.h>
-# include <limits.h>
+#  include "libft.h"
+#  include <stdarg.h>
+#  include <limits.h>
 
-# define BUFF_SIZE	4096
-# define LENGTH_H	0x01
-# define LENGTH_HH	0x02
-# define LENGTH_L	0x04
-# define LENGTH_LL	0x08
-# define LENGTH_LLL	0x10
-# define LENGTH_J	0x20
-# define LENGTH_Z	0x40
-# define LENGTH_T	0x80
+#  define LENGTH_H		0x01
+#  define LENGTH_HH		0x02
+#  define LENGTH_L		0x04
+#  define LENGTH_LL		0x08
+#  define LENGTH_LLL	0x10
+#  define LENGTH_J		0x20
+#  define LENGTH_Z		0x40
+#  define LENGTH_T		0x80
 
 typedef struct		s_data
 {
@@ -125,4 +126,5 @@ static t_handler	g_jump_table[] = {
 	unknown, length_z, unknown, unknown, unknown, unknown
 };
 
+# endif
 #endif
