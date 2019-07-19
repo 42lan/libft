@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 12:05:58 by amalsago          #+#    #+#             */
-/*   Updated: 2019/05/26 16:45:29 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/07/19 15:27:45 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,8 @@ size_t				ft_uilen(uintmax_t number, int base);
 ** LISTS
 */
 
-void				ft_lstadd(t_list **alst, t_list *new);
+void				ft_lstadd_top(t_list **alst, t_list *new);
+void				ft_lstadd_end(t_list **alst, t_list *new);
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
@@ -111,12 +112,19 @@ void				ft_putstr(char const *s);
 void				ft_putstr_fd(char const *s, int fd);
 
 /*
+** SORTING
+*/
+
+void				ft_qsort(char **array, int left, int right);
+
+/*
 ** STRING
 */
 
 int					ft_cntwords(char const *s, char c);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strchr(const char *s, int c);
+int					ft_strchr_index(char *s, char c);
 void				ft_strclr(char *s);
 int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dst, const char *src);
