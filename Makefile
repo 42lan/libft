@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 11:06:32 by amalsago          #+#    #+#              #
-#    Updated: 2019/05/26 17:14:42 by amalsago         ###   ########.fr        #
+#    Updated: 2019/07/19 16:03:15 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,8 @@ SRCNAME		= conversions/ft_atoi.c					\
 			  counters/ft_cntwords.c	\
 			  counters/ft_silen.c		\
 			  counters/ft_uilen.c		\
-			  lists/ft_lstadd.c		\
+			  lists/ft_lstadd_top.c	\
+			  lists/ft_lstadd_end.c	\
 			  lists/ft_lstdel.c		\
 			  lists/ft_lstdelone.c	\
 			  lists/ft_lstiter.c	\
@@ -76,8 +77,7 @@ SRCNAME		= conversions/ft_atoi.c					\
 			  predicates/ft_isalnum.c		\
 			  predicates/ft_isalpha.c		\
 			  predicates/ft_isascii.c		\
-			  predicates/ft_isascii.c		\
-			  predicates/ft_islower.c		\
+			  predicates/ft_isdigit.c		\
 			  predicates/ft_islower.c		\
 			  predicates/ft_isprint.c		\
 			  predicates/ft_isseparator.c	\
@@ -92,33 +92,35 @@ SRCNAME		= conversions/ft_atoi.c					\
 			  print/ft_putnbr_fd.c	\
 			  print/ft_putstr.c		\
 			  print/ft_putstr_fd.c	\
-			  string/ft_strcat.c	\
-			  string/ft_strchr.c	\
-			  string/ft_strclr.c	\
-			  string/ft_strcmp.c	\
-			  string/ft_strcpy.c	\
-			  string/ft_strdel.c	\
-			  string/ft_strdup.c	\
-			  string/ft_strequ.c	\
-			  string/ft_striter.c	\
-			  string/ft_striteri.c	\
-			  string/ft_strjoin.c	\
-			  string/ft_strlcat.c	\
-			  string/ft_strlen.c	\
-			  string/ft_strmap.c	\
-			  string/ft_strmapi.c	\
-			  string/ft_strncat.c	\
-			  string/ft_strncmp.c	\
-			  string/ft_strncpy.c	\
-			  string/ft_strnequ.c	\
-			  string/ft_strnew.c	\
-			  string/ft_strnew2d.c	\
-			  string/ft_strnstr.c	\
-			  string/ft_strrchr.c	\
-			  string/ft_strsplit.c	\
-			  string/ft_strstr.c	\
-			  string/ft_strsub.c	\
-			  string/ft_strtrim.c	\
+			  sorting/ft_qsort.c	\
+			  string/ft_strcat.c		\
+			  string/ft_strchr.c		\
+			  string/ft_strchr_index.c	\
+			  string/ft_strclr.c		\
+			  string/ft_strcmp.c		\
+			  string/ft_strcpy.c		\
+			  string/ft_strdel.c		\
+			  string/ft_strdup.c		\
+			  string/ft_strequ.c		\
+			  string/ft_striter.c		\
+			  string/ft_striteri.c		\
+			  string/ft_strjoin.c		\
+			  string/ft_strlcat.c		\
+			  string/ft_strlen.c		\
+			  string/ft_strmap.c		\
+			  string/ft_strmapi.c		\
+			  string/ft_strncat.c		\
+			  string/ft_strncmp.c		\
+			  string/ft_strncpy.c		\
+			  string/ft_strnequ.c		\
+			  string/ft_strnew.c		\
+			  string/ft_strnew2d.c		\
+			  string/ft_strnstr.c		\
+			  string/ft_strrchr.c		\
+			  string/ft_strsplit.c		\
+			  string/ft_strstr.c		\
+			  string/ft_strsub.c		\
+			  string/ft_strtrim.c		\
 			  utilities/ft_printf/ft_printf.c				\
 			  utilities/ft_printf/parsing.c					\
 			  utilities/ft_printf/specs/apply_specs.c		\
@@ -171,13 +173,13 @@ $(NAME): $(OBJ)
 	@printf $(CR)$(GREEN)"✓ $(NAME) is created\n"$(EOC)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
-	-@$(MKDIR) $(OBJDIR)/{conversions,counters,lists,memory,predicates,print,string,utilities/{get_next_line,ft_printf/{tools,specs,types}}}
+	@$(MKDIR) $(dir $@)
 	@$(GCC) $(WOPT) $(OOPT) $(IOPT) -c $< -o $@
 	@printf $(CR)"[ $(BASENAME)/%s ]" $@
 
 clean:
 	@$(RM) $(OBJDIR)
-	@printf $(CR)$(RED)"✗ $(OBJDIR) is deleted\n"$(EOC)
+	@printf $(CR)$(RED)"✗ $(OBJDIR) folder and its content are deleted\n"$(EOC)
 
 fclean: clean
 	@$(RM) $(NAME)
