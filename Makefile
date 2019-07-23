@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 11:06:32 by amalsago          #+#    #+#              #
-#    Updated: 2019/07/19 16:03:15 by amalsago         ###   ########.fr        #
+#    Updated: 2019/07/23 11:58:23 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,7 @@ SRCNAME		= conversions/ft_atoi.c					\
 			  lists/ft_lstiter.c	\
 			  lists/ft_lstmap.c		\
 			  lists/ft_lstnew.c		\
+			  lists/ft_lstprint.c	\
 			  memory/ft_bzero.c		\
 			  memory/ft_memalloc.c	\
 			  memory/ft_memccpy.c	\
@@ -179,7 +180,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c
 
 clean:
 	@$(RM) $(OBJDIR)
-	@printf $(CR)$(RED)"✗ $(OBJDIR) folder and its content are deleted\n"$(EOC)
+	@printf $(CR)$(RED)"✗ libft/objects and its content are deleted\n"$(EOC)
 
 fclean: clean
 	@$(RM) $(NAME)
