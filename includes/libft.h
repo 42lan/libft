@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 12:05:58 by amalsago          #+#    #+#             */
-/*   Updated: 2019/10/26 17:11:12 by amalsago         ###   ########.fr       */
+/*   Updated: 2019/10/26 18:35:56 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -164,6 +164,7 @@ size_t				ft_strspn(const char *s, const char *charset);
 char				*ft_strnstr(const char *haystack, const char *needle,
 					size_t len);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
+char                *ft_strtok(char *str, const char *sep);
 char				*ft_strtrim(char const *s);
 
 #endif
