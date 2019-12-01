@@ -12,8 +12,10 @@
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# ifndef BUFF_SIZE_GNL
-#  define BUFF_SIZE_GNL 32
+# define BUFF_SIZE_GNL 32
+# ifndef OPEN_MAX
+#  define OPEN_MAX 2048
+# endif
 
 #  include <unistd.h>
 #  include <limits.h>
