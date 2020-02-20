@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 11:06:32 by amalsago          #+#    #+#              #
-#    Updated: 2019/12/31 02:58:55 by amalsago         ###   ########.fr        #
+#    Updated: 2020/02/20 15:14:30 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ OBJDIR		= ./objects
 # List of source and header files
 
 SRCNAME		= conversions/ft_atoi.c					\
+			  conversions/ft_atolli.c				\
 			  conversions/ft_ftoa_static.c			\
 			  conversions/ft_itoa.c					\
 			  conversions/ft_itoa_static.c			\
@@ -195,7 +196,7 @@ $(NAME): $(OBJ)
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
 	@$(MKDIR) $(dir $@)
 	@$(GCC) $(WOPT) $(OOPT) $(IOPT) -c $< -o $@
-	@printf $(CR)"[ ./libft/%s ]" $@
+	@printf $(CR)"[ libft/%s ]" $@
 
 clean:
 	@if [ -d $(OBJDIR) ]; then \
