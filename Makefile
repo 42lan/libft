@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 11:06:32 by amalsago          #+#    #+#              #
-#    Updated: 2020/02/20 15:14:30 by amalsago         ###   ########.fr        #
+#    Updated: 2020/02/22 01:12:50 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ OBJDIR		= ./objects
 
 SRCNAME		= conversions/ft_atoi.c					\
 			  conversions/ft_atolli.c				\
+			  conversions/ft_ca2ia.c				\
 			  conversions/ft_ftoa_static.c			\
 			  conversions/ft_itoa.c					\
 			  conversions/ft_itoa_static.c			\
@@ -55,6 +56,7 @@ SRCNAME		= conversions/ft_atoi.c					\
 			  conversions/ft_toupper.c				\
 			  conversions/ft_uitoa_base.c			\
 			  conversions/ft_uitoa_base_static.c	\
+			  counters/ft_arraysize.c	\
 			  counters/ft_count_words.c	\
 			  counters/ft_silen.c		\
 			  counters/ft_uilen.c		\
