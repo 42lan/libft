@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 11:06:32 by amalsago          #+#    #+#              #
-#    Updated: 2020/02/22 01:12:50 by amalsago         ###   ########.fr        #
+#    Updated: 2020/02/22 11:03:45 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,6 +86,7 @@ SRCNAME		= conversions/ft_atoi.c					\
 			  memory/ft_memmove.c	\
 			  memory/ft_memset.c	\
 			  memory/ft_swap.c		\
+			  memory/ft_swap_xor.c	\
 			  predicates/ft_isalnum.c		\
 			  predicates/ft_isalpha.c		\
 			  predicates/ft_isascii.c		\

@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 12:05:58 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/22 01:12:01 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/22 11:03:30 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,7 @@ void				ft_memdel(void **ap);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_swap(void *a, void *b, size_t size);
+void				ft_swap_xor(int *a, int *b);
 
 /*
 ** PREDICATES
