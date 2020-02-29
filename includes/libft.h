@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 12:05:58 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/22 11:03:30 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/29 14:21:10 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,6 +139,7 @@ void				ft_putstr_fd(char const *s, int fd);
 */
 
 void				ft_qsort(char **array, int left, int right);
+void				ft_qsort_int(int *array, int lo, int hi);
 
 /*
 ** STRING

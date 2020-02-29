@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/15 11:06:32 by amalsago          #+#    #+#              #
-#    Updated: 2020/02/22 11:03:45 by amalsago         ###   ########.fr        #
+#    Updated: 2020/02/29 14:21:28 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -106,6 +106,7 @@ SRCNAME		= conversions/ft_atoi.c					\
 			  print/ft_putstr.c		\
 			  print/ft_putstr_fd.c	\
 			  sorting/ft_qsort.c	\
+			  sorting/ft_qsort_int.c	\
 			  string/form_path.c			\
 			  string/ft_getenv.c			\
 			  string/ft_realpath.c			\
