@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 12:05:58 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/29 14:21:10 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/09 12:08:54 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef struct		s_list
 */
 
 int					ft_atoi(const char *str);
-long long int       ft_atolli(const char *str);
+long long int		ft_atolli(const char *str);
 int					*ft_ca2ia(char **char_array);
 char				*ft_ftoa_static(double number, unsigned int precision);
 char				*ft_itoa(int n);
