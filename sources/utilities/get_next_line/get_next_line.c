@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/25 09:12:15 by amalsago          #+#    #+#             */
-/*   Updated: 2019/11/26 12:08:42 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/10 14:15:53 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,9 @@ int					get_next_line(const int fd, char **line)
 			break ;
 	}
 	if (bytes_read <= 0 && !ft_strlen(save[fd]))
+	{
+		ft_strdel(&save[fd]);
 		return (bytes_read);
+	}
 	return (get_line(&save[fd], line));
 }
