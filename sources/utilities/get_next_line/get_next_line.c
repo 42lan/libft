@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/25 09:12:15 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/10 14:15:53 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/10 14:50:08 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,14 @@ int					get_next_line(const int fd, char **line)
 	if (!save[fd])
 		if (!(save[fd] = ft_strnew(0)))
 			return (-1);
-	while ((bytes_read = read(fd, buff, BUFF_SIZE_GNL)) > 0)
+	while (!ft_strchr(save[fd], '\n')
+		&& (bytes_read = read(fd, buff, BUFF_SIZE_GNL)) > 0)
 	{
 		buff[bytes_read] = '\0';
 		tmp = save[fd];
 		if (!(save[fd] = ft_strjoin(save[fd], buff)))
 			return (-1);
 		free(tmp);
-		if (ft_strchr(save[fd], '\n') != NULL)
-			break ;
 	}
 	if (bytes_read <= 0 && !ft_strlen(save[fd]))
 	{
